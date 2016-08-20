@@ -4,23 +4,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>好农机商场</title>
-
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="javascripts/scale.fix.js"></script>
+    <script src="javascripts/jquery.js"></script>
+	<script src="javascripts/maphighlight.js"></script>
+	<script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	
-<script>
-$(".main_image img").each(function () {
-	var ww = $(".main_image").width();
-	var w = $(this).width();
-	var ml = Math.round((parseInt(ww) - parseInt(w)) / 2);
-	$(this).css({ marginLeft: ml + "px" })
-})
-</script> 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+	<script>
+		$(".main_image img").each(function () {
+			var ww = $(".main_image").width();
+			var w = $(this).width();
+			var ml = Math.round((parseInt(ww) - parseInt(w)) / 2);
+			$(this).css({ marginLeft: ml + "px" })
+		})
+	</script> 
+	<script type="text/javascript">$(function() {
+		$('.map').maphilight();
+	});</script>
   </head>
   <body>
     <div class="wrapper">
@@ -37,17 +37,45 @@ $(".main_image img").each(function () {
 				<th>数量</th>
 			</tr>
 			<tr>
-				<td><input type="text" name="imageNo" size="8" value="1"/></td>
-				<td><input type="text" name="partsName" size="8" value="挡圈35"/></td>
-				<td><input type="text" name="partsValue" size="8"value="0.0"/></td>
-				<td><input type="text" name="partsNo" size="8"/></td>
+				<td><input type="text" name="imageNo" id="imageNo" size="8" value=""/></td>
+				<td><input type="text" name="partsName" id="partsName" size="30" value=""/></td>
+				<td><input type="text" name="partsValue" id="partsValue" size="8" value="0.0"/></td>
+				<td><input type="text" name="partsNo" id="partsNo" size="8" value="0"/></td>
 			</tr>
 		</table>
 		<div align="center">  
-			<img src="images/parts1.png">
+			<img class="map" src="images/parts.jpg" border="0" usemap="#Map">
+			<map name="Map" id="Map">
+				<area shape="rect" coords="48,320,73,350" href="javascript:area1();">
+				<area shape="rect" coords="79,335,103,366" href="javascript:area2();">
+				<area shape="rect" coords="112,359,144,386" href="javascript:area3();">
+				<area shape="rect" coords="156,382,190,409" href="javascript:area2();">
+				<area shape="rect" coords="205,404,229,428" href="javascript:area4();">
+				<area shape="rect" coords="235,420,258,444" href="javascript:area5();">
+				<area shape="rect" coords="328,473,382,499" href="javascript:area61();">
+				<area shape="rect" coords="467,409,519,434" href="javascript:area62();">
+				<area shape="rect" coords="567,441,600,465" href="javascript:area63();">
+				<area shape="rect" coords="484,562,520,582" href="javascript:area64();">
+				<area shape="rect" coords="537,602,575,625" href="javascript:area65();">
+				<area shape="rect" coords="740,678,788,699" href="javascript:area66();">
+				<area shape="rect" coords="813,715,843,737" href="javascript:area7();">
+				<area shape="rect" coords="407,137,429,160" href="javascript:area8();">
+				<area shape="rect" coords="447,157,470,182" href="javascript:area9();">
+				<area shape="rect" coords="484,176,511,203" href="javascript:area8();">
+				<area shape="rect" coords="589,206,623,234" href="javascript:area10();">
+				<area shape="rect" coords="688,232,721,263" href="javascript:area11();">
+				<area shape="rect" coords="837,285,866,310" href="javascript:area12();">
+				<area shape="rect" coords="875,190,920,215" href="javascript:area131();">
+				<area shape="rect" coords="926,200,971,228" href="javascript:area132();">
+				<area shape="rect" coords="980,224,1016,245" href="javascript:area133();">
+				<area shape="rect" coords="1004,245,1046,268" href="javascript:area131();">
+				<area shape="rect" coords="979,359,1023,385" href="javascript:area134();">
+				<area shape="rect" coords="967,454,995,475" href="javascript:area14();">
+				<area shape="rect" coords="1005,464,1033,490" href="javascript:area15();">
+				<area shape="rect" coords="1022,518,1067,544" href="javascript:area135();">
+				<area shape="rect" coords="955,562,1000,589" href="javascript:area16();">
+			</map>
 		</div>
-
-		
 		 <table>
 			<tr>
 				<th>4小时<input type="radio"  name="time" value="fourHours" /><br/><font color='red' size='1px'>10元/公里</font></th>
