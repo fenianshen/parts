@@ -349,8 +349,4 @@ footer p + p {
     width: 100%;
   }
 }
-@media print {
-  header p.view a small:before {
-    content: 'at https://github.com/';
-  }
-}
+
